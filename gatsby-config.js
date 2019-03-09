@@ -1,34 +1,40 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `A sample site using gatsby-source-wordpress`,
+    subtitle: `Data fetched from a site hosted on wordpress.com`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    // https://public-api.wordpress.com/wp/v2/sites/gatsbyjsexamplewordpress.wordpress.com/pages/
+    /*
+     * Gatsby's data processing layer begins with “source”
+     * plugins. Here the site sources its data from Wordpress.
+     */
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-wordpress`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        baseUrl: `maxlibin.com`,
+        protocol: `https`,
+        hostingWPCOM: false,
+        useACF: false,
+        verboseOutput: true,
+        perPage: 20,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+        ],
+        excludedRoutes: [
+          "/wp/v2/search",
+          "/wp/v2/block-renderer",
+        ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    `gatsby-plugin-glamor`
   ],
 }
