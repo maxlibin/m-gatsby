@@ -2,37 +2,35 @@ import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../layouts"
+
+import Styles from "./IndexStyle";
+
 class Home extends Component {
   render() {
     const data = this.props.data
 
     return (
       <Layout>
-        <div>
-          <h1>Pages</h1>
-          {data.allWordpressPage.edges.map(({ node }) => (
-            <div key={node.slug}>
+        <h2>About:</h2>
+        <p>Have a project you'd like to discuss?</p>
+        <ul className={Styles.social}>
+          <li><a href="">@</a></li>
+          <li>LinkedIn</li>
+          <li>GitHub</li>
+          <li>Twitter</li>
+        </ul>
+
+        <h2>My Experience:</h2>
+        {
+          data.allWordpressPost.edges.map(({ node }) => (
+            <div className={Styles.content} key={node.slug}>
               <Link to={node.slug} css={{ textDecoration: `none` }}>
                 <h3>{node.title}</h3>
               </Link>
               <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              <span>
-                
-                {node.date}
-              </span>
             </div>
-          ))}
-        </div>
-        <hr />
-        <h1>Posts</h1>
-        {data.allWordpressPost.edges.map(({ node }) => (
-          <div key={node.slug}>
-            <Link to={node.slug} css={{ textDecoration: `none` }}>
-              <h3>{node.title}</h3>
-            </Link>
-            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </div>
-        ))}
+          ))
+        }
       </Layout>
     )
   }
@@ -43,18 +41,8 @@ export default Home
 // Set here the ID of the home page.
 export const pageQuery = graphql`
   query {
-    allWordpressPage {
-      edges {
-        node {
-          id
-          title
-          excerpt
-          slug
-          date(formatString: "MMMM DD, YYYY")
-        }
-      }
-    }
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressPost(sort: { fields: [date], order: DESC, }) {
+      totalCount,
       edges {
         node {
           title

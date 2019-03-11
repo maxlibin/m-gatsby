@@ -4,8 +4,6 @@ import PropTypes from "prop-types"
 
 import Layout from "../layouts"
 
-
-
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.wordpressPost
