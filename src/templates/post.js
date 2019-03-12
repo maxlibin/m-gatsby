@@ -2,7 +2,12 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 
+import { Link } from "gatsby";
+
+import Logo from "../components/Logo";
+
 import Layout from "../layouts"
+import Styles from "./postStyle";
 
 class PostTemplate extends Component {
   render() {
@@ -10,8 +15,17 @@ class PostTemplate extends Component {
 
     return (
       <Layout>
-        <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div className={Styles.head}>
+          <div className={Styles.container}>
+            <Link to="/">
+              <Logo size={0.5} />
+            </Link>
+          </div>
+        </div>
+        <div className={Styles.post}>
+          <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
       </Layout>
     )
   }

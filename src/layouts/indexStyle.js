@@ -34,6 +34,14 @@ css.global('h3',  {
 css.global('a',  {
   textDecoration: "none",
   color: "#fff",
+
+  ":hover": {
+    color: "#FF6100",
+  }
+});
+
+css.global('a:hover',  {
+  color: "#FF6100",
 });
 
 css.global('p',  {
@@ -51,23 +59,9 @@ const Styles = {
   container: css({
     maxWidth: '960px',
     margin: "0 auto",
-    padding: 0,
-  }),
-
-  header: css({
-    width: "100%",
-    height: "380px",
-    padding: "80px 0 0 0"
-  }),
-
-  block: css({
-    display: "block",
-  }),
-
-  symbol: css({
-    fontWeight: 400,
-    opacity: 0.2,
-    fontSize: 24,
+    padding: "0 20px",
+    overflow: "auto",
+    wordWrap: "break-word"
   }),
 }
 

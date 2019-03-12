@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../layouts"
 
+import Logo from "../components/Logo";
+
 import Styles from "./IndexStyle";
 
 class Home extends Component {
@@ -11,20 +13,34 @@ class Home extends Component {
 
     return (
       <Layout>
+        <div className={Styles.header}>
+          <div className={Styles.container}>
+            <h1>              
+              <span className={Styles.block}>
+                <span className={Styles.symbol}>&lt;</span>
+                Hi
+                <span className={Styles.symbol}>/&gt;</span>
+              </span>
+              <span className={Styles.block}>I am <Logo />,</span>
+              <span className={Styles.block}>Frontend developer</span>
+            </h1>
+          </div>
+        </div>
+
         <h2>About:</h2>
-        <p>Have a project you'd like to discuss?</p>
+        <p>I am based in Singapore, Have a project you'd like to discuss?</p>
         <ul className={Styles.social}>
-          <li><a href="">@</a></li>
-          <li>LinkedIn</li>
-          <li>GitHub</li>
-          <li>Twitter</li>
+          <li><a href="mailTo:me@maxlibin.com" target="_blank" rel="noreferrer noopener">@</a></li>
+          <li><a href="https://sg.linkedin.com/in/maxlibin" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/maxlibin" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/maxlibin" target="_blank" rel="noreferrer noopener">Twitter</a></li>
         </ul>
 
         <h2>My Experience:</h2>
         {
           data.allWordpressPost.edges.map(({ node }) => (
             <div className={Styles.content} key={node.slug}>
-              <Link to={node.slug} css={{ textDecoration: `none` }}>
+              <Link to={node.slug}>
                 <h3>{node.title}</h3>
               </Link>
               <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />

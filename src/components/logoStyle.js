@@ -4,6 +4,8 @@ export default css(
   {
     position: "relative",
     color: "#3DA5D9",
+    fontSize: "68px",
+    fontWeight: 700,
     textShadow: "5px 1px 0 rgba(255,255,255, 0.05)",
 
     "::after": {

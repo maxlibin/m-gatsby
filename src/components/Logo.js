@@ -1,11 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import Styles from "./logoStyle";
 
-class Logo extends Component {
-  render() {
-    return (
-      <span className={Styles}>Max</span>
-    )
-  }
+const Logo = props => {
+  return (
+    <span
+      className={Styles}
+      style={
+        props && props.size
+          ? {transformOrigin: "left top", display: "inline-block", transform: `scale(${props.size})`}
+          : null
+      }
+    >
+      Max
+    </span>
+  )
 }
 export default Logo
