@@ -8,6 +8,13 @@ class PageTemplate extends Component {
 
     return (
       <Layout>
+        <div className={Styles.head}>
+          <div className={Styles.container}>
+            <Link to="/">
+              <Logo size={0.5} />
+            </Link>
+          </div>
+        </div>
         <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
         <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
       </Layout>

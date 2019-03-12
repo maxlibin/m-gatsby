@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `maxlibin.com`,
-        protocol: `https`,
+        baseUrl: `35.236.180.128`,
+        protocol: `http`,
         hostingWPCOM: false,
         useACF: false,
         verboseOutput: true,
