@@ -1,8 +1,11 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layouts"
-
 import {css} from "glamor";
+
+import { Link } from "gatsby";
+import Logo from "../components/Logo";
+
 
 const Styles = {
   head: css({

@@ -1,11 +1,9 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
+import {css} from "glamor";
 
 import Layout from "../layouts"
-
 import Logo from "../components/Logo";
-
-import {css} from "glamor";
 
 const Styles = {
   content: css({
