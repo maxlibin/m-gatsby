@@ -2,6 +2,18 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layouts"
 
+import {css} from "glamor";
+
+const Styles = {
+  head: css({
+    padding: "60px 0 0",
+  }),
+
+  post: css({
+    marginTop: "40px"
+  }),
+}
+
 class PageTemplate extends Component {
   render() {
     const currentPage = this.props.data.wordpressPage
