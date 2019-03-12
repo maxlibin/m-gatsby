@@ -7,7 +7,18 @@ import { Link } from "gatsby";
 import Logo from "../components/Logo";
 
 import Layout from "../layouts"
-import Styles from "./postStyle";
+
+import {css} from "glamor";
+
+const Styles = {
+  head: css({
+    padding: "60px 0 0",
+  }),
+
+  post: css({
+    marginTop: "40px"
+  }),
+}
 
 class PostTemplate extends Component {
   render() {
