@@ -63,7 +63,7 @@ class Home extends Component {
         </div>
 
         <h2>About:</h2>
-        <p>I am based in Singapore, Have a project you'd like to discuss?</p>
+        <p>I am based in Singapore, have a project you'd like to discuss?</p>
         <ul className={Styles.social}>
           <li><a href="mailTo:me@maxlibin.com" target="_blank" rel="noreferrer noopener">@</a></li>
           <li><a href="https://sg.linkedin.com/in/maxlibin" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
