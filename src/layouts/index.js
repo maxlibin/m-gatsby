@@ -48,8 +48,8 @@ css.global('a:hover',  {
 });
 
 css.global('p',  {
-  color: "rgba(255,255,255, 0.7)",
-  fontSize: 18,
+  color: "rgba(255,255,255, 0.8)",
+  fontSize: 19,
   lineHeight: 1.8,
 });
 
