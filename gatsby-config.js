@@ -38,7 +38,7 @@ module.exports = {
       options: {
         trackingId: "UA-55191105-2"
       },
-    }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-glamor`
