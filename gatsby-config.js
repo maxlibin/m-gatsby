@@ -39,6 +39,7 @@ module.exports = {
         trackingId: "UA-55191105-2"
       },
     },
+    `gatsby-plugin-favicon`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-glamor`
