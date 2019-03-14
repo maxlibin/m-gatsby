@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {Helmet} from "react-helmet";
+import "../styles/crayon.min.css";
 import {css} from "glamor";
 
 css.global('html, body',  {
@@ -10,6 +11,7 @@ css.global('html, body',  {
   fontFamily: 'Roboto',
   letterSpacing: '1px',
   fontWeight: 100,
+  backgroundColor: "#1d1b24",
 });
 
 css.global('h1',  {
