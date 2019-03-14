@@ -72,8 +72,8 @@ class DefaultLayout extends Component {
     return (
       <div className={Styles.body}>
         <Helmet>
-          <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin-ext" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=latin-ext" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet" />
         </Helmet>
         
         
