@@ -39,10 +39,6 @@ css.global('h3',  {
 css.global('a',  {
   textDecoration: "none",
   color: "#fff",
-
-  ":hover": {
-    color: "#FF6100",
-  }
 });
 
 css.global('a:hover',  {
