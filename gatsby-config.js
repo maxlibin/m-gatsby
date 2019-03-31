@@ -30,7 +30,7 @@ module.exports = {
       options: {
         name: `Maxlibin - frontend developer based in Singapore`,
         short_name: `Singapore frontend developer`,
-        start_url: `/posts`,
+        start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
