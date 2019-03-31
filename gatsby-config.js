@@ -24,6 +24,18 @@ module.exports = {
         excludedRoutes: ["/wp/v2/search", "/wp/v2/block-renderer"],
       },
     },
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Maxlibin - frontend developer based in Singapore`,
+        short_name: `Singapore frontend developer`,
+        start_url: `/posts`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
