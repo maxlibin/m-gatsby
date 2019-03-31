@@ -26,17 +26,6 @@ module.exports = {
     },
     `gatsby-plugin-feed`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Maxlibin - frontend developer based in Singapore`,
-        short_name: `Singapore frontend developer`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-55191105-2",
