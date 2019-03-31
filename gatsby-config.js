@@ -12,7 +12,6 @@ module.exports = {
         hostingWPCOM: false,
         useACF: false,
         verboseOutput: true,
-        perPage: 20,
         includedRoutes: [
           "**/categories",
           "**/posts",

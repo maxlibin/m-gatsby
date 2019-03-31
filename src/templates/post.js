@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
-import { Link } from "gatsby";
-import {css} from "glamor";
+import { Link } from "gatsby"
+import { css } from "glamor"
 
-import Logo from "../components/Logo";
+import Logo from "../components/Logo"
 import Layout from "../layouts"
-
 
 const Styles = {
   head: css({
@@ -14,7 +13,7 @@ const Styles = {
   }),
 
   post: css({
-    marginTop: "40px"
+    marginTop: "40px",
   }),
 }
 

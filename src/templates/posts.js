@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import { Link, graphql } from "gatsby"
+import Link from "gatsby-link"
 import { css } from "glamor"
 
-import Layout from "../layouts"
 import Logo from "../components/Logo"
+import Layout from "../layouts"
 
 const Styles = {
   content: css({
@@ -57,14 +57,28 @@ const Styles = {
       width: "100%",
     },
   }),
+
   navLink: css({
     marginBottom: "60px",
   }),
 }
 
-class Home extends Component {
+const NavLink = props => {
+  if (!props.test) {
+    return <Link to={props.url}>{props.text}</Link>
+  } else {
+    return <span>{props.text}</span>
+  }
+}
+
+class Posts extends Component {
   render() {
-    const data = this.props.data
+    const {
+      pageContext: { group, index, first, last },
+    } = this.props
+
+    const previousUrl = index - 1 === 1 ? "" : (index - 1).toString()
+    const nextUrl = (index + 1).toString()
 
     return (
       <Layout>
@@ -83,7 +97,6 @@ class Home extends Component {
             </h1>
           </div>
         </div>
-
         <h2>About:</h2>
         <p>I am based in Singapore, have a project you'd like to discuss?</p>
         <ul className={Styles.social}>
@@ -126,7 +139,7 @@ class Home extends Component {
         </ul>
 
         <h2>My Experience:</h2>
-        {data.allWordpressPost.edges.map(({ node }) => (
+        {group.map(({ node }) => (
           <div className={Styles.content} key={node.slug}>
             <Link to={node.slug}>
               <h3>{node.title}</h3>
@@ -145,29 +158,24 @@ class Home extends Component {
             </Link>
           </div>
         ))}
-
-        <div className={Styles.navLink}>
-          <Link to={"/posts/2"}>Next page</Link>
+        <div className="navLink">
+          <div className="previousLink">
+            <NavLink
+              test={first}
+              url={index === 2 ? "/" : "/posts/" + previousUrl}
+              text="Go to Previous Page"
+            />
+          </div>
+          <div className={Styles.navLink}>
+            <NavLink
+              test={last}
+              url={"/posts/" + nextUrl}
+              text="Go to Next Page"
+            />
+          </div>
         </div>
       </Layout>
     )
   }
 }
-
-export default Home
-
-// Set here the ID of the home page.
-export const pageQuery = graphql`
-  query {
-    allWordpressPost(limit: 10, sort: { fields: [date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          title
-          excerpt
-          slug
-        }
-      }
-    }
-  }
-`
+export default Posts
