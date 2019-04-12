@@ -12,6 +12,10 @@ module.exports = {
         hostingWPCOM: false,
         useACF: false,
         verboseOutput: true,
+        searchAndReplaceContentUrls: {
+          sourceUrl: "http://blog.maxlibin.com/wp-content/uploads/",
+          replacementUrl: "https://blog.maxlibin.com/wp-content/uploads/",
+        },
         includedRoutes: [
           "**/categories",
           "**/posts",
