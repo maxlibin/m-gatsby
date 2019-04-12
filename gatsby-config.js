@@ -24,7 +24,7 @@ module.exports = {
         excludedRoutes: ["/wp/v2/search", "/wp/v2/block-renderer"],
       },
     },
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
