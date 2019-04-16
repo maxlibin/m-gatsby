@@ -35,6 +35,7 @@ module.exports = {
         trackingId: "UA-55191105-2",
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-favicon`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
