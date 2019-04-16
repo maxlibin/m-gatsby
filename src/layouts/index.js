@@ -71,11 +71,17 @@ class DefaultLayout extends Component {
       <div className={Styles.body}>
         <Helmet>
           <meta charSet="utf-8" />
+          <meta
+            property="og:title"
+            content="Max li bin - frontend developer based in Singapore"
+          />
+          <meta
+            property="og:description"
+            content="I am based in Singapore, Have a Javascript, React, ReasonMl,
+            ReasonReact project you'd like to discuss?"
+          />
+
           <title>Max li bin - frontend developer based in Singapore</title>
-          <title>
-            I am based in Singapore, Have a Javascript, React, ReasonMl,
-            ReasonReact project you'd like to discuss?
-          </title>
           <link
             href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=latin-ext"
             rel="stylesheet"

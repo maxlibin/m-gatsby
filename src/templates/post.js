@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { css } from "glamor"
@@ -23,6 +24,12 @@ class PostTemplate extends Component {
 
     return (
       <Layout>
+        <Helmet>
+          <meta title={post.title} />
+          <meta property="og:title" content={post.title} />
+
+          <title>{post.title}</title>
+        </Helmet>
         <div className={Styles.head}>
           <div className={Styles.container}>
             <Link to="/">
