@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import "../styles/crayon.min.css"
+import { title, description } from "../Const"
 import { css } from "glamor"
 
 css.global("html, body", {
@@ -71,17 +72,10 @@ class DefaultLayout extends Component {
       <div className={Styles.body}>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta
-            property="og:title"
-            content="Max li bin - frontend developer based in Singapore"
-          />
-          <meta
-            property="og:description"
-            content="I am based in Singapore, Have a Javascript, React, ReasonMl,
-            ReasonReact project you'd like to discuss?"
-          />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
 
-          <title>Max li bin - frontend developer based in Singapore</title>
+          <title>{title}</title>
           <link
             href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=latin-ext"
             rel="stylesheet"

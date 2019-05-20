@@ -4,6 +4,7 @@ import { css } from "glamor"
 
 import Layout from "../layouts"
 import Logo from "../components/Logo"
+import { description } from "../Const"
 
 const Styles = {
   content: css({
@@ -85,7 +86,7 @@ class Home extends Component {
         </div>
 
         <h2>About:</h2>
-        <p>I am based in Singapore, have a project you'd like to discuss?</p>
+        <p>{description}</p>
         <ul className={Styles.social}>
           <li>
             <a
