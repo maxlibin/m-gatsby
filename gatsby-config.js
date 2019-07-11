@@ -13,8 +13,8 @@ module.exports = {
         useACF: false,
         verboseOutput: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://blog.maxlibin.com/wp-content/uploads/",
-          replacementUrl: "http://blog.maxlibin.com/wp-content/uploads/",
+          sourceUrl: "http://blog.maxlibin.com/wp-content/uploads/",
+          replacementUrl: "https://blog.maxlibin.com/wp-content/uploads/",
         },
         includedRoutes: [
           "**/categories",
