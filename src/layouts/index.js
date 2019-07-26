@@ -64,6 +64,30 @@ const Styles = {
     overflow: "auto",
     wordWrap: "break-word",
   }),
+
+  footerContainer: css({
+    textAlign: "center",
+    padding: "20px 0",
+  }),
+
+  telegramButton: css({
+    borderRadius: "3px",
+    backgroundColor: "rgb(0, 93, 142)",
+    padding: "10px 20px",
+    display: "inline-block",
+    margin: "0 auto",
+    fontWeight: "bold",
+
+    ":hover": {
+      color: "#ccc",
+    },
+  }),
+
+  telegramButtonImg: css({
+    width: "20px",
+    marginRight: "10px",
+    verticalAlign: "middle",
+  }),
 }
 
 class DefaultLayout extends Component {
@@ -87,6 +111,21 @@ class DefaultLayout extends Component {
         </Helmet>
 
         <div className={Styles.container}>{this.props.children}</div>
+        <div className={Styles.footerContainer}>
+          <a
+            href="https://telegram.im/@FindJobsBot"
+            target="_blank"
+            class={Styles.telegramButton}
+            title=""
+          >
+            <img
+              class={Styles.telegramButtonImg}
+              width="20"
+              src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+            />
+            Looking for job on telegram? @FindJobsBot
+          </a>
+        </div>
       </div>
     )
   }
