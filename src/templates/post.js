@@ -16,6 +16,14 @@ const Styles = {
   post: css({
     marginTop: "40px",
   }),
+
+  metaData: css({
+    opacity: 0.5,
+    fontStyle: "Normal",
+    display: "block",
+    marginTop: "20px",
+    marginBottom: "40px",
+  }),
 }
 
 class PostTemplate extends Component {
@@ -39,7 +47,7 @@ class PostTemplate extends Component {
         </div>
         <div className={Styles.post}>
           <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-          <cite dangerouslySetInnerHTML={{ __html: post.date }} />
+          <cite className={Styles.metaData}>posted on {post.date}</cite>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
       </Layout>

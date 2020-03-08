@@ -58,8 +58,16 @@ const Styles = {
       width: "100%",
     },
   }),
+
   navLink: css({
     marginBottom: "60px",
+  }),
+
+  metaData: css({
+    opacity: 0.5,
+    fontStyle: "Normal",
+    display: "block",
+    marginBottom: "40px",
   }),
 }
 
@@ -126,12 +134,15 @@ class Home extends Component {
           </li>
         </ul>
 
-        <h2>My Experience:</h2>
+        <h2>Sharing my experience and things I have learned:</h2>
         {data.allWordpressPost.edges.map(({ node }) => (
           <div className={Styles.content} key={node.slug}>
             <Link to={node.slug}>
               <h3>{node.title}</h3>
             </Link>
+            <cite className={Styles.metaData} datetime={node.date}>
+              posted on {node.date}
+            </cite>
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             <Link to={node.slug} className={Styles.readMore}>
               Read more{" "}
@@ -167,6 +178,7 @@ export const pageQuery = graphql`
           title
           excerpt
           slug
+          date(formatString: "DD MMM YYYY")
         }
       }
     }
