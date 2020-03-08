@@ -138,12 +138,13 @@ class Posts extends Component {
           </li>
         </ul>
 
-        <h2>My Experience:</h2>
+        <h2>Sharing my experience and things I have learned:</h2>
         {group.map(({ node }) => (
           <div className={Styles.content} key={node.slug}>
             <Link to={node.slug}>
               <h3>{node.title}</h3>
             </Link>
+            <cite datetime={node.date}>{node.date}</cite>
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             <Link to={node.slug} className={Styles.readMore}>
               Read more{" "}

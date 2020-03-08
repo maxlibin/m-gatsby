@@ -39,6 +39,7 @@ class PostTemplate extends Component {
         </div>
         <div className={Styles.post}>
           <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+          <cite dangerouslySetInnerHTML={{ __html: post.date }} />
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
       </Layout>
@@ -58,6 +59,7 @@ export const pageQuery = graphql`
     wordpressPost(id: { eq: $id }) {
       title
       content
+      date(formatString: "DD MMMM YYYY")
     }
     site {
       siteMetadata {
