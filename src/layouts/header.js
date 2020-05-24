@@ -67,17 +67,19 @@ class Header extends Component {
       <>
         <div className={Styles.header}>
           <div className={Styles.container}>
-            <h1>
-              <span className={Styles.block}>
-                <span className={Styles.symbol}>&lt;</span>
-                Hi
-                <span className={Styles.symbol}>/&gt;</span>
-              </span>
-              <span className={Styles.block}>
-                I am <Logo />,
-              </span>
-              <span className={Styles.block}>Frontend developer</span>
-            </h1>
+            <a href="/">
+              <h1>
+                <span className={Styles.block}>
+                  <span className={Styles.symbol}>&lt;</span>
+                  Hi
+                  <span className={Styles.symbol}>/&gt;</span>
+                </span>
+                <span className={Styles.block}>
+                  I am <Logo />,
+                </span>
+                <span className={Styles.block}>Frontend developer</span>
+              </h1>
+            </a>
           </div>
         </div>
         <h2>About:</h2>
