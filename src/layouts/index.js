@@ -108,10 +108,10 @@ class DefaultLayout extends Component {
       <div className={Styles.body}>
         <Helmet>
           <meta charSet="utf-8" />
+          <title>{title}</title>
+          <meta name="description" content={description}></meta>
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
-
-          <title>{title}</title>
           <link
             rel="preload"
             href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=latin-ext&display=swap"
