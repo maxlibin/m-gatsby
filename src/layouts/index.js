@@ -112,7 +112,9 @@ class DefaultLayout extends Component {
           ></link>
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700"
-            rel="stylesheet"
+            rel="preload"
+            as="style"
+            onload="this.onload=null; this.rel='stylesheet'; document.body.classList.add('fontLoaded')"
           />
         </Helmet>
 
