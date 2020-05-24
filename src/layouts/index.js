@@ -112,6 +112,10 @@ class DefaultLayout extends Component {
           <meta name="description" content={description}></meta>
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
+          <meta
+            name="google-site-verification"
+            content="K3GpANMVg6pYaudsC9v6KzevMLnXhkJK_kaPtKc2imY"
+          />
           <link
             rel="preload"
             href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=latin-ext&display=swap"
