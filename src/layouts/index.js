@@ -106,7 +106,7 @@ class DefaultLayout extends Component {
   render() {
     return (
       <div className={Styles.body}>
-        <Helmet>
+        <Helmet htmlAttributes={{ lang: "en" }}>
           <meta charSet="utf-8" />
           <title>{title}</title>
           <meta name="description" content={description}></meta>
