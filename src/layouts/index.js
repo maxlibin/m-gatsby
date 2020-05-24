@@ -52,6 +52,10 @@ css.global("p", {
   lineHeight: 1.8,
 })
 
+css.global(".wp-block-image img", {
+  maxWidth: "100%",
+})
+
 const Styles = {
   body: css({
     background: "#1d1b24",
