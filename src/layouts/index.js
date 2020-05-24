@@ -9,22 +9,26 @@ css.global("html, body", {
   padding: 0,
   margin: 0,
   color: "#fff",
-  fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif";
+  fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
   letterSpacing: "1px",
   fontWeight: 100,
   backgroundColor: "#1d1b24",
 })
 
 css.global("body.fontLoaded", {
-  fontFamily: "Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif";
+  fontFamily: "Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif",
 })
 
 css.global("h1", {
-  fontFamily: "PT Sans",
+  fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
   fontSize: "68px",
   fontWeight: 700,
   margin: 0,
   padding: 0,
+})
+
+css.global("body.fontLoaded h1", {
+  fontFamily: "PT Sans",
 })
 
 css.global("h2", {
