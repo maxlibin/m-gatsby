@@ -9,10 +9,14 @@ css.global("html, body", {
   padding: 0,
   margin: 0,
   color: "#fff",
-  fontFamily: "Roboto",
+  fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif";
   letterSpacing: "1px",
   fontWeight: 100,
   backgroundColor: "#1d1b24",
+})
+
+css.global("body.fontLoaded", {
+  fontFamily: "Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 })
 
 css.global("h1", {
