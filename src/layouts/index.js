@@ -101,9 +101,11 @@ class DefaultLayout extends Component {
 
           <title>{title}</title>
           <link
+            rel="preload"
             href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=latin-ext"
-            rel="stylesheet"
-          />
+            as="style"
+            onload="this.onload=null; this.rel='stylesheet'; document.body.classList.add('fontLoaded')"
+          ></link>
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700"
             rel="stylesheet"
