@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `A sample site using gatsby-source-wordpress`,
-    subtitle: `Data fetched from a site hosted on wordpress.com`,
+    title: `Max li bin - Frontend developer`,
+    subtitle: `I am based in Singapore, have Javascript, React, ReasonMl, ReasonReact projects you'd like to discuss?`,
   },
   plugins: [
     {
